@@ -1,6 +1,6 @@
 package rules;
 
-import com.springprojects.droolengine.model.Order;
+import com.drool.practice.model.Order;
 
 dialect "mvel";
 
@@ -20,10 +20,10 @@ rule "VISA"
         orderObject.setDiscount(14);
 end;
 
-rule "AMEX
+rule "AMEX"
     when
         orderObject : Order(cardType == "AMEX" && price > 7000)
     then
         System.out.println("AMEX discount has been added");
-        orderObject.setDiscount(18);"
+        orderObject.setDiscount(18);
 end;
