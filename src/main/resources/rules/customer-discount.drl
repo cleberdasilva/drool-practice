@@ -20,10 +20,10 @@ rule "VISA"
         orderObject.setDiscount(14);
 end;
 
-rule "RUPAY"
+rule "AMEX
     when
-        orderObject : Order(cardType == "RUPAY" && price > 3000)
+        orderObject : Order(cardType == "AMEX" && price > 7000)
     then
-        System.out.println("RUPAY discount has been added");
-        orderObject.setDiscount(20);
+        System.out.println("AMEX discount has been added");
+        orderObject.setDiscount(18);"
 end;
