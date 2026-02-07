@@ -1,0 +1,16 @@
+template header
+id
+ifcondition
+thencondition
+
+template "tmp1"
+
+rule "@{id}"
+   dialect "mvel"
+    when
+        @{ifcondition}
+    then
+        @{thencondition}
+end
+
+end template
